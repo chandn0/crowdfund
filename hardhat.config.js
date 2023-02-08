@@ -21,7 +21,7 @@ module.exports = {
         chainId: 8350,
         urls: {
           apiURL:
-            "https://rpc.dev.buildbear.io/Solid_Wedge_Antilles_fdcf2516",
+            "https://rpc.dev.buildbear.io/verify/etherscan/Solid_Wedge_Antilles_fdcf2516",
           browserURL: "https://explorer.dev.buildbear.io/Solid_Wedge_Antilles_fdcf2516",
         },
       },

@@ -11,3 +11,7 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+npx hardhat verify --network buildbear 0x35e400566C8370AFC2e4A941574CCe27Bb0e702a
+
+npx hardhat run scripts/deploy.js --network buildbear

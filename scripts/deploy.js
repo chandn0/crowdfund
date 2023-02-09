@@ -18,9 +18,9 @@ async function main() {
     ` ${lock.address}`
   );
 
-  await run(`verify:verify`, {
-    address: lock.address,
-  });
+  // await run(`verify:verify`, {
+  //   address: lock.address,
+  // });
 
 }
 

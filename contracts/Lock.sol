@@ -9,4 +9,8 @@ contract Lock {
     address payable public owner;
 
     event Withdrawal(uint amount, uint when);
+
+    function deposit(uint aa) public {
+        unlockTime = block.timestamp + aa;
+    }
 }

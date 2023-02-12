@@ -1,30 +1,22 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomiclabs/hardhat-etherscan");
 
-/** @type import('hardhat/config').HardhatUserConfig */
+// Go to https://www.alchemyapi.io, sign up, create
+// a new App in its dashboard, and replace "KEY" with its key
+const ALCHEMY_API_KEY = "KEY";
+
+// Replace this private key with your Goerli account private key
+// To export your private key from Metamask, open Metamask and
+// go to Account Details > Export Private Key
+// Beware: NEVER put real Ether into testing accounts
+const GOERLI_PRIVATE_KEY = "YOUR GOERLI PRIVATE KEY";
+
 module.exports = {
   solidity: "0.8.9",
   networks: {
-    buildbear: {
-      url: "https://rpc.dev.buildbear.io/Commercial_Jar_Jar_Binks_ec77d57e",
-      accounts: ["5849c78835ad2825b86fd1537bfd6ff9414a40f45598760234e42e05eba1c654"],
-      // url: "https://rpc.dev.buildbear.io/Naughty_Ratts_Tyerel_abcc8bba",
-    },
-  },
-  etherscan: {
-    apiKey: {
-      buildbear: "test1",
-    },
-    customChains: [
-      {
-        network: "buildbear",
-        chainId: 8363,
-        urls: {
-          apiURL:
-            "https://rpc.dev.buildbear.io/verify/etherscan/Commercial_Jar_Jar_Binks_ec77d57e",
-          browserURL: "https://explorer.dev.buildbear.io/Commercial_Jar_Jar_Binks_ec77d57e",
-        },
-      },
-    ],
-  },
+    goerli: {
+      url: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+      accounts: [GOERLI_PRIVATE_KEY]
+    }
+  }
 };

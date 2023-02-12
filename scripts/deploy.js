@@ -9,18 +9,14 @@ const hre = require("hardhat");
 async function main() {
 
 
-  const Lock = await hre.ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy();
+  const Crowdfund = await hre.ethers.getContractFactory("Crowdfund");
+  const crowdfund = await Crowdfund.deploy();
 
-  await lock.deployed();
+  await crowdfund.deployed();
 
   console.log(
-    ` ${lock.address}`
+    ` ${crowdfund.address}`
   );
-
-  await run(`verify:verify`, {
-    address: lock.address,
-  });
 
 }
 
